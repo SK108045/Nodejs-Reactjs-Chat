@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "react-chat-engine-advanced": "^0.1.28",
+    "react-chat-engine-pretty": "^0.1.8"
+  },
+  "homepage": "https://SK108045.github.io/Nodejs-Reactjs-Chat/"
+}

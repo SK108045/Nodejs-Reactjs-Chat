@@ -18,14 +18,12 @@ jobs:
     - name: Update README
       run: |
         echo "This is a real-time chat application built using **React** for the frontend and **Node.js** for the backend." > README.md
-        echo "Last updated: $(date)" >> README.md
     
     - name: Commit and push if changed
       run: |
         git config --global user.email "johnwakaba146@gmail.com"
         git config --global user.name "John"
         git add README.md
-        git commit -m "Update README $(date)"
-        git push
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update README" && git push)
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

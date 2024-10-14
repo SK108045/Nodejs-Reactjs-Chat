@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const axios = require("axios"); // Require axios module
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 app.use(express.json());
